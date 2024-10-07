@@ -4,13 +4,6 @@
 
 This repository contains a program that aimed at retrieving and processing data for tree plantations using their GPS coordinates. The project leverages satellite imagery and geospatial data to extract essential metrics such as canopy cover, canopy height, and growth rates. It is designed to be open-source, facilitating collaboration and further development.
 
-## Features
-
-- **GPS-Based Data Retrieval**: Extracts tree data based on provided GPS coordinates.
-- **Canopy Analysis**: Calculates canopy cover and canopy height using satellite imagery.
-- **Growth Metrics**: Estimates growth rates, tree age, diameter at breast height (DBH) and CO₂ sequestration.
-- **Batch Processing**: Efficiently handles large datasets by processing data in batches.
-
 ## Directory Structure
 
 ```
