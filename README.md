@@ -55,8 +55,18 @@ This repository contains a program that aimed at retrieving and processing data 
 4. **Configure Google Earth Engine**
 
    - Ensure you have a [Google Earth Engine](https://earthengine.google.com/) account.
+   - Create a `.env` file at the root of the project and add your GEE project ID:
+     ```env
+     GEE_PROJECT=your-gcp-project-id
+     ```
+   - Obtain your Google Earth Engine credentials:
+     - Run the following commands in your terminal to authenticate and generate the `credentials` file:
+       ```bash
+       earthengine authenticate
+       ```
    - Place your `credentials` file in the `.config/google_earth_engine/` directory.
-   - **Note**: The `.config` directory is excluded from version control for security reasons.
+   - **Note**: The `.env` file and `.config` directory are excluded from version control for security reasons.
+
 
 ## Usage
 
@@ -69,7 +79,6 @@ The main script allows you to update tree metrics by processing a CSV file conta
 - `--plantation_date`: Date of plantation in `YYYY-MM-DD` format.
 - `--initial_height`: Initial height of the trees in meters.
 - `--project_developer`: Name of the project developer.
-- `--specie_tree_density`: Tree density per hectare.
 
 ### Running the Script
 
@@ -79,8 +88,7 @@ python src/main.py \
     --final_csv data/output/your_output.csv \
     --plantation_date 2022-05-20 \
     --initial_height 1.5 \
-    --project_developer "GreenEarth Initiative" \
-    --specie_tree_density 250
+    --project_developer "GreenEarth Initiative"
 ```
 
 ## License
