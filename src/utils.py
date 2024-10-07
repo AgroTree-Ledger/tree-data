@@ -65,7 +65,7 @@ def translate_collection_to_df(feature_collection, properties=[], batch_size=100
 
     return pd.DataFrame(tree_data)
 
-def extract_points_from_csv(df, species="Paulownia", initial_height=2.0, plantation_date="2023-09-15", project_developer="EcoTree Solution"):
+def extract_points_from_csv(df, initial_height, plantation_date, project_developer, species="Paulownia",):
     """
     Extracts points from a CSV file and constructs a list of dictionaries containing tree information,
     such as location, species, initial height, and plantation details.

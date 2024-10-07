@@ -61,7 +61,7 @@ def tree_data_retrieval(df, args):
     """
     print("Retrieval of tree's data...")
     
-    data_list = extract_points_from_csv(df, args.species, args.initial_height, args.plantation_date, args.project_developer)
+    data_list = extract_points_from_csv(df, args.initial_height, args.plantation_date, args.project_developer)
     roi_gee = extract_roi_from_points(data_list, wkt_format=False)
     trees_collection = create_trees_feature_collection(data_list)
     
